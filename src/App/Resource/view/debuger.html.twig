@@ -1,0 +1,33 @@
+<div id="info_block" class="clearfix">
+    <div class="section clearfix">
+        <h2>User</h2>
+        {% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
+            <p>Статус = (+)</p>
+            <p>name = {{ app.user.username }}</p>
+            <p>email = {{ app.user.email }}</p>
+            <p>role = {% for role in app.user.roles %} {{ role }} {% endfor %}</p>
+        {% else %}
+            <p>Статус = (-)</p>
+        {% endif %}
+    </div>
+
+    <div class="section clearfix">
+        <h2>Parameters</h2>
+        {% for key, attribute in app.request_stack.currentRequest.attributes %}
+            {% if attribute is iterable %}
+                {% if attribute is not empty %}
+                    <p>Route attributes =</p>
+                    <ul>
+                        {% for atrkey, atr in attribute %}
+                            <li>{{ atrkey }} = {{ atr }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Route haven't eny attributes.</p>
+                {% endif %}
+            {% else %}
+                <p>{{ key }} = {{ attribute }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

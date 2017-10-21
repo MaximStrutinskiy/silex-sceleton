@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div id="form-container">
+        <h2>Авторизация.</h2>
+        <form action="{{ path('login') }}" method="post">
+            {{ error }}
+            {{ form_widget(form) }}
+            <input type="submit" name="submit"/>
+        </form>
+    </div>
+{% endblock %}

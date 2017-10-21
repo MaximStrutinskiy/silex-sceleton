@@ -1,0 +1,12 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="container">
+        <h2>Страница пользователя.</h2>
+        <p>Информация пользователя:</p>
+        <p>name = {{ user.username }}</p>
+        <p>email = {{ user.email }}</p>
+        <hr>
+        <a href="{{ path('logout') }}">Logout</a>
+    </div>
+{% endblock %}

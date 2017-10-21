@@ -1,0 +1,11 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div id="form-container">
+        <h2>Страница регистрации.</h2>
+        <form action="{{ path('register') }}" method="post">
+            {{ form_widget(form) }}
+            <input type="submit" name="submit"/>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+composer.lock
+vendor/
+.idea/
+config/parameter.php
+
+var/cache/*
+var/logs/*
+
+# ignore all files with simbole "~" exaple: "src/App/Entity/User.php~"
+*~
