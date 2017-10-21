@@ -1,7 +1,7 @@
 ***Silex sceleton.***
 ````
-- User registration, autorization.
-- AdminLTE (Frontend plagin for admin panel)
+- User registration, authorization.
+- AdminLTE (Frontend plugin for admin panel)
 - Customization security for API methods 
 ````
 
@@ -88,7 +88,7 @@ Available commands:
 ***Task***
 ````
 - gulp for frontend
-- security for API (use JWT tecnology)
-- user actions (reset datas, registration, autorization)
+- security for API (use JWT technology)
+- user actions (reset datas, registration, authorization)
 - add validations for form
 ````
